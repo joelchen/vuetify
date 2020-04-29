@@ -759,7 +759,7 @@ describe('VTreeView.ts', () => { // eslint-disable-line max-statements
       disabled: true,
       children: [
         { id: 2, name: 'Bar' },
-        { id: 3, name: 'Fizz' },
+        { id: 3, name: 'Fizz', disabled: true },
         { id: 4, name: 'Buzz' },
       ],
     }]
@@ -785,5 +785,10 @@ describe('VTreeView.ts', () => { // eslint-disable-line max-statements
     await wrapper.vm.$nextTick()
 
     expect(input).toHaveBeenLastCalledWith([2])
+
+    wrapper.findAll('.v-treeview-node__checkbox').at(2).trigger('click')
+    await wrapper.vm.$nextTick()
+
+    expect(input).toHaveBeenCalledTimes(1)
   })
 })
