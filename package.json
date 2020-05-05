@@ -1,4 +1,5 @@
 {
+  "name": "vuetify",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -54,7 +55,7 @@
     "tslint": "^5.18.0",
     "typescript": "^3.8.2",
     "typestrict": "^1.0.2",
-    "vue": "^3.0.0-beta.2",
+    "vue": "^3.0.0-beta.9",
     "vue-loader": "^16.0.0-alpha.1",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
